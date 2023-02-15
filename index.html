@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="stile.css">
+        <script src="scene.js"></script>
+    </head>
+    <body>
+        <div id="pattern"></div>
+        <div id="tilesdiv">
+            <div id="tiles"></div>
+        </div>
+
+        <div id="buttons">
+            <div class="paint" id="start">
+                <button onclick="setPainter(event,0)">S</button>
+            </div>
+            <div class="paint" id="end">
+                <button onclick="setPainter(event,1)">E</button>
+            </div>
+            <div class="paint" id="obstacle">
+                <button onclick="setPainter(event,2)">O</button>
+            </div>
+            <div id="go">
+                <button class="deactivated" onclick="tracePath(event)">TRACE</button>
+            </div>
+        </div>
+        <div id="options">
+            <div id="showClosed_checkbox">
+                <input type="checkbox" name="show Closed" id="showClosed">
+                <p>mostra percorsi scartati</p>
+            </div>
+            <div id="reset">
+                <button id="resetButton" onclick="cls()">cls</button>
+            </div>
+        </div>
+        <script type="module" src="Astar_pathfinding.js"></script>
+    </body>
+</html>
